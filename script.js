@@ -19,14 +19,14 @@ function writePassword() {
       writePassword();
     } else {
       passwordLength = lengthInput;
-      passwordText = "";
+      password = "";
       console.log(passwordLength)
       for (let i = 0; i < passwordLength; i++) {
-        passwordText += chars.charAt(
+        password += chars.charAt(
           Math.floor(Math.random() * chars.length)
         );
       }
-      console.log(passwordText)
+      console.log(password)
 
 
       
@@ -37,22 +37,22 @@ function writePassword() {
 
 
     } else {
-      passwordText = passwordText.replace(/[0-9]/g, specChar[Math.floor(Math.random()*specChar.length)]);
-      console.log(passwordText)
+      password = password.replace(/[0-9]/g, specChar[Math.floor(Math.random()*specChar.length)]);
+      console.log(password)
     }
 
     if(confirm("Would you like to add special characters?")){
 
     } else {
-      passwordText = passwordText.replace(/[~!@#$%&*?><]/g, specChar[Math.floor(Math.random()*specChar.length)])
-      console.log(passwordText)
+      password = password.replace(/[~!@#$%&*?><]/g, specChar[Math.floor(Math.random()*specChar.length)])
+      console.log(password)
     }
   
   } 
 
   if(confirm("Would you like the password to be all caps?")){
-    passwordText.textContent.toUpperCase();
-    console.log(passwordText);
+    password.textContent.toUpperCase()
+    console.log(password);
   }
 
   passwordText.value = password;
